@@ -23,32 +23,14 @@ public class StarterApplication extends Application {
 
     // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-            .applicationId("03be80442c7b8708a9295fe4b1ba328046a9b5c1")
-            .clientKey("3086a86d564edd8198b63c1128094ff9466a747d")
-            .server("http://ec2-13-59-105-0.us-east-2.compute.amazonaws.com:80/parse/")
+            .applicationId("** YOUR OWN **")
+            .clientKey("** YOUR OWN **")
+            .server("** YOUR OWN **")
             .build()
     );
 
-    /*
-      // creates a parse object and save it in the server
-    ParseObject object = new ParseObject("ExampleObject");
-    object.put("myNumber", "123");
-    object.put("myString", "rob");
 
-    object.saveInBackground(new SaveCallback () {
-      @Override
-      public void done(ParseException ex) {
-        if (ex == null) {
-          Log.i("Parse Result", "Successful!");
-        } else {
-          Log.i("Parse Result", "Failed" + ex.toString());
-        }
-      }
-    });
-
-*/
-    //comment it out if you wanna control the signup and login yourself
-    //ParseUser.enableAutomaticUser(); // this will create a user object in lass users in parse serevr at the start of the app
+    //ParseUser.enableAutomaticUser(); // this will create a user object in class users in parse serevr at the start of the app
     ParseACL defaultACL = new ParseACL();
     defaultACL.setPublicReadAccess(true);
     defaultACL.setPublicWriteAccess(true);
